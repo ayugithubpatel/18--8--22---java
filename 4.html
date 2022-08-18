@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#BtnFadeOut").attr("disabled",true);
+            
+        $("#BtnFadeIn").click(function(){
+            if(confirm("Are you sure..??"))
+            {
+                $("#MyDiv1").fadeIn(1000);
+                $("#MyDiv2").fadeIn(2000);
+                $("#MyDiv3").fadeIn(3000);
+                $("#BtnFadeOut").attr("disabled",false);
+                $(this).attr("disabled",true);
+            }
+        });
+         $("#BtnFadeOut").click(function(){
+            if(confirm("Are you sure..??"))
+            {
+                $("#MyDiv1").fadeOut(1000);
+                $("#MyDiv2").fadeOut(2000);
+                $("#MyDiv3").fadeOut(3000);
+                $("#BtnFadeIn").attr("disabled",false);
+                $(this).attr("disabled",true);
+            }
+        });
+        $("#BtnFadeToggle").click(function(){
+            if(confirm("Are you sure..??"))
+            {
+                $("#MyDiv1").fadeToggle(1000);
+                $("#MyDiv2").fadeToggle(2000);
+                $("#MyDiv3").fadeToggle(3000);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <button id="BtnFadeIn">click me for fade in</button>&nbsp;&nbsp;<button id="BtnFadeOut">click me for fade out</button>&nbsp;&nbsp;<button id="BtnFadeToggle">click me for fade in/out toggle</button>
+    <div id="MyDiv1" style="height:100px;width:100px;background-color:orangered;display:none;"></div></body><br/>
+    <div id="MyDiv2" style="height:100px;width:100px;background-color:wheat;display:none;"></div></body><br/>
+    <div id="MyDiv3" style="height:100px;width:100px;background-color:green;display:none;"></div></body><br/>
+    
+</body>
+</html>
